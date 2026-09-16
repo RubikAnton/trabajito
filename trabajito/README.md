@@ -1,2 +1,0 @@
-# trabajito
-trabajo grupal
