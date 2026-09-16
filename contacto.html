@@ -1,42 +1,145 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactanos</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VerdeVida Market | Contacto</title>
+  <meta name="description" content="Escríbenos, encuéntranos en el mapa y síguenos en redes sociales.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="barra">
+
+  <header class="encabezado">
+    <div class="contenedor encabezado__fila-superior">
+      <div class="encabezado__marca">
         <h1>VerdeVida Market</h1>
-        <p>"Productos orgánicos frescos para una vida saludable y sostenible"</p>
-        <nav>
-            <ul class="navegacion">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <h3>Contactanos</h3>
-    <form action="/" >
-        <label for="email">Email    :</label>
-        <input type="email" placeholder="tu@email.com" id="email">
-        <label for="mensaje">Mensaje    :</label>
-        <textarea name="mensaje" id="mensaje" maxlength="200px"></textarea>
-        <button>Enviar</button>
-    </form>
-    <footer>
-        <h3>Redes</h3>
-        <ul>
-            <li><a href="">Tiktok</a></li>
-            <li><a href="">WhatsApp</a></li>
-            <li><a href="">Instagram</a></li>
-            <li><a href="">Libro de reclamaciones</a></li>
-        </ul>
-        <p>&copy; Todos los derechos reservados al grupo 1 Curso Programación Web 2026</p>
-    </footer>
+        <p class="encabezado__eslogan">"Productos orgánicos frescos para una vida saludable y sostenible"</p>
+      </div>
+      <button class="boton-menu" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-principal contenedor" aria-label="Navegación principal">
+      <ul class="nav-principal__lista">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="contenedor encabezado-pagina">
+      <h2>Contáctanos</h2>
+      <p>¿Tienes preguntas o quieres hacer un pedido especial? Escríbenos, estamos para ayudarte.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="seccion">
+      <div class="contenedor contacto__layout">
+
+        <div>
+          <h3 class="titulo-seccion">Formulario de Contacto</h3>
+          <form id="formulario-contacto" class="formulario" novalidate>
+            <div class="campo">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" required>
+              <span class="campo-error" id="nombre-error"></span>
+            </div>
+            <div class="campo">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" required>
+              <span class="campo-error" id="correo-error"></span>
+            </div>
+            <div class="campo">
+              <label for="asunto">Asunto</label>
+              <select id="asunto" name="asunto" required>
+                <option value="">Selecciona una opción</option>
+                <option value="pedido">Consulta sobre un pedido</option>
+                <option value="asesoria">Asesoría nutricional</option>
+                <option value="otro">Otro</option>
+              </select>
+              <span class="campo-error" id="asunto-error"></span>
+            </div>
+            <div class="campo">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+              <span class="campo-error" id="mensaje-error"></span>
+            </div>
+            <button type="submit" class="boton boton--primario">Enviar mensaje</button>
+            <p class="mensaje-envio" id="mensaje-envio"></p>
+          </form>
+        </div>
+
+        <div class="info-contacto">
+          <div class="tarjeta">
+            <h3>Ubicación</h3>
+            <p>Av. Los Orgánicos 245, San Sebastián, Cusco</p>
+            <div class="mapa-marcador">
+              <iframe
+                title="Mapa de ubicación de VerdeVida Market"
+                src="https://www.google.com/maps?q=San+Sebastian+Cusco+Peru&output=embed"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="tarjeta">
+            <h3>Redes Sociales</h3>
+            <p>Síguenos para conocer ofertas, recetas y novedades del campo.</p>
+            <div class="redes-lista">
+              <a href="#" aria-label="Facebook de VerdeVida Market">FB</a>
+              <a href="#" aria-label="Instagram de VerdeVida Market">IG</a>
+              <a href="#" aria-label="TikTok de VerdeVida Market">TT</a>
+              <a href="#" aria-label="WhatsApp de VerdeVida Market">WA</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__rejilla">
+        <div class="pie__marca">
+          <h4>VerdeVida Market</h4>
+          <p>Mercado orgánico local dedicado a ofrecer frutas, verduras y lácteos 100% naturales, cultivados con respeto por el medio ambiente.</p>
+        </div>
+        <div>
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li>Av. Los Orgánicos 245, Cusco</li>
+            <li>+51 984 123 456</li>
+            <li>contacto@verdevidamarket.pe</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Horario</h4>
+          <ul>
+            <li>Lun. a Sáb.: 8:00 am – 8:00 pm</li>
+            <li>Domingo: 8:00 am – 2:00 pm</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pie__base">
+        <p>&copy; 2026 VerdeVida Market. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
